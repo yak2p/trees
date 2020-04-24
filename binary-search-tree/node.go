@@ -1,7 +1,7 @@
 package binary_search_tree
 
 import (
-	"github.com/Yesphet/trees"
+	"github.com/yak2p/trees"
 )
 
 type Node struct {

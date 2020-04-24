@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/Yesphet/trees/binary-search-tree"
+	"github.com/yak2p/trees/binary-search-tree"
 )
 
 type List struct {
