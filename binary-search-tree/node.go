@@ -1,7 +1,7 @@
 package binary_search_tree
 
 import (
-	"github.com/yak2p/trees"
+	"github.com/yak2p/trees/tree"
 )
 
 type Node struct {
@@ -26,11 +26,11 @@ func (n *Node) Value() interface{} {
 	return n.value
 }
 
-func (n *Node) Left() trees.Node {
+func (n *Node) Left() tree.Node {
 	return n.left
 }
 
-func (n *Node) Right() trees.Node {
+func (n *Node) Right() tree.Node {
 	return n.right
 }
 

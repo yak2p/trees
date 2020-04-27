@@ -1,4 +1,4 @@
-package trees
+package tree
 
 type Node interface {
 	Key() int
@@ -16,4 +16,7 @@ type Tree interface {
 
 	// delete node from tree if exist
 	Remove(key int)
+
+	//return the root node
+	Root() Node
 }

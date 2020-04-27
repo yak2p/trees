@@ -6,6 +6,7 @@ import (
 	"sort"
 	"time"
 
+	avl_tree "github.com/yak2p/trees/avl-tree"
 	"github.com/yak2p/trees/binary-search-tree"
 )
 
@@ -29,8 +30,13 @@ func (l *List) Swap(i, j int) {
 
 func main() {
 
-	maxNum := 10000000
+	maxNum := 100000
 	list := rand.Perm(maxNum)
+
+	//list := make([]int, maxNum)
+	//for i := 0; i < maxNum; i++ {
+	//	list[i] = i
+	//}
 
 	startTime := time.Now()
 	tree := &binary_search_tree.BinarySearchTree{}
@@ -47,7 +53,14 @@ func main() {
 	fmt.Printf("Recursive Duration: %s\n", time.Now().Sub(startTime).String())
 
 	startTime = time.Now()
+	tree2 := &avl_tree.Tree{}
+	for _, v := range list {
+		tree2.Insert(v, 1)
+	}
+	fmt.Printf("AVL tree Duration: %s\n", time.Now().Sub(startTime).String())
+
+	startTime = time.Now()
 	sort.Sort(&List{list})
-	fmt.Printf("Sort Duration: %s\n", time.Now().Sub(startTime).String())
+	fmt.Printf("sort.Sort Duration: %s\n", time.Now().Sub(startTime).String())
 
 }
