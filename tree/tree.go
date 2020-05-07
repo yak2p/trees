@@ -7,7 +7,7 @@ type Node interface {
 	Right() Node
 }
 
-type Tree interface {
+type BinaryTree interface {
 	// get the value of the key, if the node is not exist, return nil
 	GetValue(key int) interface{}
 

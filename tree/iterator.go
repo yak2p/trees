@@ -1,10 +1,10 @@
 package tree
 
 type Iterator struct {
-	tree Tree
+	tree BinaryTree
 }
 
-func (iter *Iterator) Inorder(t Tree) []int {
+func (iter *Iterator) Inorder(t BinaryTree) []int {
 	if t.Root() == nil {
 		return nil
 	}
@@ -22,6 +22,7 @@ func (iter *Iterator) Inorder(t Tree) []int {
 			n = n.Right()
 			continue
 		}
+		break
 	}
 	return list
 }
